@@ -1,0 +1,11 @@
+package com.cathaybank.homework.reponsitory;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cathaybank.homework.entity.Currency;
+
+public interface CurrencyRepository extends JpaRepository<Currency, Integer> {
+    Optional<Currency> findByCode(String code);
+}

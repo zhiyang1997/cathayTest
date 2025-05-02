@@ -79,7 +79,7 @@ public class CoindeskService {
             result.setCurrencies(currencies);
             return result;
       } catch (Exception e) {
-         throw new RuntimeException("Error transforming coindesk data", e);
+         throw new RuntimeException("資料轉換失敗，請重新確認。", e);
       }
       
      }

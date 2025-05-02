@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-HomeworkApplication<homework>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.cathaybank.homework.HomeworkApplication",
+            "projectName": "homework",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

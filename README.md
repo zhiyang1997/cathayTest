@@ -20,12 +20,15 @@
 
 ## API呼叫之URL
 
-GET： http://localhost:8080/currencies/
-POST： http://localhost:8080/currencies/　
-PUT： http://localhost:8080/currencies/{id}
-DELETE： http://localhost:8080/currencies/{id}
+1. GET： http://localhost:8080/currencies/  
+2. POST： http://localhost:8080/currencies/  
+3. PUT： http://localhost:8080/currencies/{id}  
+4. DELETE： http://localhost:8080/currencies/{id}  
+5. 呼叫 coindesk API： http://localhost:8080/coindesk/raw  
+6. 呼叫 coindesk API，進行資料轉換： http://localhost:8080/coindesk/transformed  
 
-資料庫網址：
+## 資料庫網址
+
 h2 console URL: http://localhost:8080/h2-console/
 
 

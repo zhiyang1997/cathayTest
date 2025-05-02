@@ -68,7 +68,7 @@ public class CoindeskService {
                 
                 // 從資料庫查詢中文名稱
                 Currency currency = currencyRepository.findByCode(code).orElse(null);
-                currencyInfo.setCodeName(currency != null ? currency.getCodeName() : "");
+                currencyInfo.setName(currency != null ? currency.getName() : "");
                 
                 // 設定匯率
                 currencyInfo.setRate(new BigDecimal(currencyNode.path("rate_float").asText()));

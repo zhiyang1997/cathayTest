@@ -11,20 +11,21 @@ public class Currency {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "CURRENCY_ID")
     private Integer id;
     
-    @Column(name = "CODE", unique = true)
+    @Column(name = "CURRENCY_CODE", unique = true)
     private String code;
 
-    @Column(name = "CODENAME")
-    private String codeName;
+    @Column(name = "CURRENCY_NAME")
+    private String name;
 
     /** getter */
     public String getCode() { 
         return code; 
     }
-    public String getCodeName() { 
-        return codeName; 
+    public String getName() { 
+        return name; 
     }
     public Integer getId() { 
         return id; 
@@ -34,8 +35,8 @@ public class Currency {
     public void setCode(String code) { 
         this.code = code; 
     }
-    public void setCodeName(String codeName) { 
-        this.codeName = codeName; 
+    public void setName(String name) { 
+        this.name = name; 
     }
     public void setId(Integer id) { 
         this.id = id; 

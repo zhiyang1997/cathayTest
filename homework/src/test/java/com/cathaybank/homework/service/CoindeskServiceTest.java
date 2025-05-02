@@ -82,15 +82,15 @@ public class CoindeskServiceTest {
         // 3. 設置 CurrencyRepository 模擬回傳值
         Currency usdCurrency = new Currency();
         usdCurrency.setCode("USD");
-        usdCurrency.setCodeName("美元");
+        usdCurrency.setName("美元");
         
         Currency gbpCurrency = new Currency();
         gbpCurrency.setCode("GBP");
-        gbpCurrency.setCodeName("英鎊");
+        gbpCurrency.setName("英鎊");
         
         Currency eurCurrency = new Currency();
         eurCurrency.setCode("EUR");
-        eurCurrency.setCodeName("歐元");
+        eurCurrency.setName("歐元");
         
         when(currencyRepository.findByCode("USD")).thenReturn(Optional.of(usdCurrency));
         when(currencyRepository.findByCode("GBP")).thenReturn(Optional.of(gbpCurrency));
@@ -106,15 +106,15 @@ public class CoindeskServiceTest {
         
         // 驗證幣別資訊
         assertEquals("USD", result.getCurrencies().get(0).getCode());
-        assertEquals("美元", result.getCurrencies().get(0).getCodeName());
+        assertEquals("美元", result.getCurrencies().get(0).getName());
         assertEquals(new BigDecimal("57756.2984"), result.getCurrencies().get(0).getRate());
         
         assertEquals("GBP", result.getCurrencies().get(1).getCode());
-        assertEquals("英鎊", result.getCurrencies().get(1).getCodeName());
+        assertEquals("英鎊", result.getCurrencies().get(1).getName());
         assertEquals(new BigDecimal("43984.0203"), result.getCurrencies().get(1).getRate());
         
         assertEquals("EUR", result.getCurrencies().get(2).getCode());
-        assertEquals("歐元", result.getCurrencies().get(2).getCodeName());
+        assertEquals("歐元", result.getCurrencies().get(2).getName());
         assertEquals(new BigDecimal("52243.2865"), result.getCurrencies().get(2).getRate());
         
         verify(currencyRepository, times(1)).findByCode("USD");

@@ -4,15 +4,15 @@ import java.math.BigDecimal;
 
 public class CurrencyInfoDto {
     private String code;
-    private String codeName;
+    private String name;
     private BigDecimal rate;
 
     /** getter */
     public String getCode() { 
         return code; 
     }
-    public String getCodeName() { 
-        return codeName; 
+    public String getName() { 
+        return name; 
     }
     public BigDecimal getRate() { 
         return rate; 
@@ -22,8 +22,8 @@ public class CurrencyInfoDto {
     public void setCode(String code) {
         this.code = code;
     }
-    public void setCodeName(String codeName) {
-        this.codeName = codeName;
+    public void setName(String name) {
+        this.name = name;
     }
     public void setRate(BigDecimal rate) {
         this.rate = rate;

@@ -31,4 +31,17 @@
 
 h2 console URL: http://localhost:8080/h2-console/
 
+## 建立資料庫語法
+~~~~sql
+CREATE TABLE currency (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    CODE NVARCHAR UNIQUE NOT NULL,
+    CODENAME NVARCHAR NOT NULL
+);
+
+INSERT INTO currency (CODE, CODENAME) VALUES ('USD', '美元');
+INSERT INTO currency (CODE, CODENAME) VALUES ('GBP', '英鎊');
+INSERT INTO currency (CODE, CODENAME) VALUES ('EUR', '歐元');
+~~~~
+
 

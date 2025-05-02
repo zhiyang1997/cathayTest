@@ -18,14 +18,11 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.mockito.junit.jupiter.MockitoSettings;
-import org.skyscreamer.jsonassert.JSONAssert;
 import org.springframework.web.client.RestTemplate;
 
 import com.cathaybank.homework.dto.CoindeskTransformedDto;
 import com.cathaybank.homework.entity.Currency;
 import com.cathaybank.homework.reponsitory.CurrencyRepository;
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 
 @ExtendWith(MockitoExtension.class)
